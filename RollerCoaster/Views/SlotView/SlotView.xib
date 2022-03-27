@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SlotView" customModule="RollerCoaster" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="hOu-DZ-dEc" id="0ga-FE-T8a"/>
+                <outlet property="scrollView" destination="8Td-7J-sbt" id="GKv-iN-UUS"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="OzF-A2-QeO">
+            <rect key="frame" x="0.0" y="0.0" width="60" height="34"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B7s-rc-aHU">
+                    <rect key="frame" x="0.0" y="0.0" width="60" height="34"/>
+                    <subviews>
+                        <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Td-7J-sbt">
+                            <rect key="frame" x="0.0" y="0.0" width="60" height="34"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="hOu-DZ-dEc">
+                                    <rect key="frame" x="0.0" y="0.0" width="60" height="34"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="34" placeholder="YES" id="Yh2-E0-P1n"/>
+                                    </constraints>
+                                </stackView>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="hOu-DZ-dEc" firstAttribute="leading" secondItem="8Td-7J-sbt" secondAttribute="leading" id="3s2-7g-7N2"/>
+                                <constraint firstItem="hOu-DZ-dEc" firstAttribute="top" secondItem="8Td-7J-sbt" secondAttribute="top" id="9Ls-3E-KUt"/>
+                                <constraint firstItem="hOu-DZ-dEc" firstAttribute="centerX" secondItem="8Td-7J-sbt" secondAttribute="centerX" id="MiD-2e-yXL"/>
+                                <constraint firstAttribute="bottom" secondItem="hOu-DZ-dEc" secondAttribute="bottom" id="QOs-Ac-tNw"/>
+                                <constraint firstAttribute="trailing" secondItem="hOu-DZ-dEc" secondAttribute="trailing" id="tUn-hE-b70"/>
+                            </constraints>
+                        </scrollView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="0.24915381191539115" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="8Td-7J-sbt" secondAttribute="trailing" id="9jI-uA-E1s"/>
+                        <constraint firstItem="8Td-7J-sbt" firstAttribute="leading" secondItem="B7s-rc-aHU" secondAttribute="leading" id="PYl-3H-y9r"/>
+                        <constraint firstItem="8Td-7J-sbt" firstAttribute="top" secondItem="B7s-rc-aHU" secondAttribute="top" id="b0F-pS-Whd"/>
+                        <constraint firstAttribute="bottom" secondItem="8Td-7J-sbt" secondAttribute="bottom" id="tCz-Gv-7Zo"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="6"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="B7s-rc-aHU" firstAttribute="top" secondItem="OzF-A2-QeO" secondAttribute="top" id="8cz-0u-PKn"/>
+                <constraint firstAttribute="trailing" secondItem="B7s-rc-aHU" secondAttribute="trailing" id="LUp-xU-tlb"/>
+                <constraint firstItem="B7s-rc-aHU" firstAttribute="leading" secondItem="OzF-A2-QeO" secondAttribute="leading" id="OSt-o7-o5K"/>
+                <constraint firstAttribute="bottom" secondItem="B7s-rc-aHU" secondAttribute="bottom" id="vlQ-ie-dpF"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-418" y="-6"/>
+        </view>
+    </objects>
+</document>

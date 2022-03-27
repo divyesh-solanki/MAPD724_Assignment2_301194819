@@ -1,0 +1,428 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2A133D2C27F0335D00658D09 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A133D2B27F0335D00658D09 /* AppDelegate.swift */; };
+		2A133D2E27F0335D00658D09 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A133D2D27F0335D00658D09 /* SceneDelegate.swift */; };
+		2A133D3027F0335D00658D09 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A133D2F27F0335D00658D09 /* ViewController.swift */; };
+		2A133D3327F0335D00658D09 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A133D3127F0335D00658D09 /* Main.storyboard */; };
+		2A133D3527F0335E00658D09 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A133D3427F0335E00658D09 /* Assets.xcassets */; };
+		2A133D3827F0335E00658D09 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A133D3627F0335E00658D09 /* LaunchScreen.storyboard */; };
+		2A133D4627F0515900658D09 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A133D4527F0515900658D09 /* SettingsViewController.swift */; };
+		2A133D4A27F0516300658D09 /* SlotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A133D4827F0516300658D09 /* SlotView.swift */; };
+		2A133D4B27F0516300658D09 /* SlotView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A133D4927F0516300658D09 /* SlotView.xib */; };
+		2A133D4E27F0516F00658D09 /* UserDefaultManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A133D4C27F0516F00658D09 /* UserDefaultManager.swift */; };
+		2A133D4F27F0516F00658D09 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A133D4D27F0516F00658D09 /* UIView+Extensions.swift */; };
+		2A133D5427F052BA00658D09 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A133D5327F052BA00658D09 /* MapViewController.swift */; };
+		2A133D5627F053B100658D09 /* UserDefaultsKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A133D5527F053B100658D09 /* UserDefaultsKey.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2A133D2827F0335D00658D09 /* RollerCoaster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RollerCoaster.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A133D2B27F0335D00658D09 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2A133D2D27F0335D00658D09 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		2A133D2F27F0335D00658D09 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2A133D3227F0335D00658D09 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2A133D3427F0335E00658D09 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2A133D3727F0335E00658D09 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2A133D3927F0335E00658D09 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2A133D4527F0515900658D09 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		2A133D4827F0516300658D09 /* SlotView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlotView.swift; sourceTree = "<group>"; };
+		2A133D4927F0516300658D09 /* SlotView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SlotView.xib; sourceTree = "<group>"; };
+		2A133D4C27F0516F00658D09 /* UserDefaultManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultManager.swift; sourceTree = "<group>"; };
+		2A133D4D27F0516F00658D09 /* UIView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		2A133D5327F052BA00658D09 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		2A133D5527F053B100658D09 /* UserDefaultsKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsKey.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2A133D2527F0335D00658D09 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2A133D1F27F0335D00658D09 = {
+			isa = PBXGroup;
+			children = (
+				2A133D2A27F0335D00658D09 /* RollerCoaster */,
+				2A133D2927F0335D00658D09 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2A133D2927F0335D00658D09 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2A133D2827F0335D00658D09 /* RollerCoaster.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2A133D2A27F0335D00658D09 /* RollerCoaster */ = {
+			isa = PBXGroup;
+			children = (
+				2A133D4427F04F1300658D09 /* Helpers */,
+				2A133D4027F0341400658D09 /* Models */,
+				2A133D4127F0341A00658D09 /* Views */,
+				2A133D3F27F033F900658D09 /* ViewControllers */,
+				2A133D4227F0342500658D09 /* SupportedFiles */,
+				2A133D2B27F0335D00658D09 /* AppDelegate.swift */,
+				2A133D2D27F0335D00658D09 /* SceneDelegate.swift */,
+			);
+			path = RollerCoaster;
+			sourceTree = "<group>";
+		};
+		2A133D3F27F033F900658D09 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				2A133D5327F052BA00658D09 /* MapViewController.swift */,
+				2A133D4527F0515900658D09 /* SettingsViewController.swift */,
+				2A133D2F27F0335D00658D09 /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		2A133D4027F0341400658D09 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2A133D5527F053B100658D09 /* UserDefaultsKey.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		2A133D4127F0341A00658D09 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2A133D4727F0516300658D09 /* SlotView */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		2A133D4227F0342500658D09 /* SupportedFiles */ = {
+			isa = PBXGroup;
+			children = (
+				2A133D4327F0343B00658D09 /* Storyboards */,
+				2A133D3427F0335E00658D09 /* Assets.xcassets */,
+				2A133D3927F0335E00658D09 /* Info.plist */,
+			);
+			path = SupportedFiles;
+			sourceTree = "<group>";
+		};
+		2A133D4327F0343B00658D09 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				2A133D3627F0335E00658D09 /* LaunchScreen.storyboard */,
+				2A133D3127F0335D00658D09 /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		2A133D4427F04F1300658D09 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				2A133D4D27F0516F00658D09 /* UIView+Extensions.swift */,
+				2A133D4C27F0516F00658D09 /* UserDefaultManager.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		2A133D4727F0516300658D09 /* SlotView */ = {
+			isa = PBXGroup;
+			children = (
+				2A133D4827F0516300658D09 /* SlotView.swift */,
+				2A133D4927F0516300658D09 /* SlotView.xib */,
+			);
+			path = SlotView;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2A133D2727F0335D00658D09 /* RollerCoaster */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2A133D3C27F0335E00658D09 /* Build configuration list for PBXNativeTarget "RollerCoaster" */;
+			buildPhases = (
+				2A133D2427F0335D00658D09 /* Sources */,
+				2A133D2527F0335D00658D09 /* Frameworks */,
+				2A133D2627F0335D00658D09 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RollerCoaster;
+			productName = RollerCoaster;
+			productReference = 2A133D2827F0335D00658D09 /* RollerCoaster.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2A133D2027F0335D00658D09 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					2A133D2727F0335D00658D09 = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+				};
+			};
+			buildConfigurationList = 2A133D2327F0335D00658D09 /* Build configuration list for PBXProject "RollerCoaster" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2A133D1F27F0335D00658D09;
+			productRefGroup = 2A133D2927F0335D00658D09 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2A133D2727F0335D00658D09 /* RollerCoaster */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2A133D2627F0335D00658D09 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2A133D3827F0335E00658D09 /* LaunchScreen.storyboard in Resources */,
+				2A133D3527F0335E00658D09 /* Assets.xcassets in Resources */,
+				2A133D4B27F0516300658D09 /* SlotView.xib in Resources */,
+				2A133D3327F0335D00658D09 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2A133D2427F0335D00658D09 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2A133D5627F053B100658D09 /* UserDefaultsKey.swift in Sources */,
+				2A133D4F27F0516F00658D09 /* UIView+Extensions.swift in Sources */,
+				2A133D4E27F0516F00658D09 /* UserDefaultManager.swift in Sources */,
+				2A133D4A27F0516300658D09 /* SlotView.swift in Sources */,
+				2A133D3027F0335D00658D09 /* ViewController.swift in Sources */,
+				2A133D2C27F0335D00658D09 /* AppDelegate.swift in Sources */,
+				2A133D2E27F0335D00658D09 /* SceneDelegate.swift in Sources */,
+				2A133D4627F0515900658D09 /* SettingsViewController.swift in Sources */,
+				2A133D5427F052BA00658D09 /* MapViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		2A133D3127F0335D00658D09 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2A133D3227F0335D00658D09 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2A133D3627F0335E00658D09 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2A133D3727F0335E00658D09 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2A133D3A27F0335E00658D09 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2A133D3B27F0335E00658D09 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2A133D3D27F0335E00658D09 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "$(SRCROOT)/RollerCoaster/SupportedFiles/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = DIP.RollerCoaster;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		2A133D3E27F0335E00658D09 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "$(SRCROOT)/RollerCoaster/SupportedFiles/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = DIP.RollerCoaster;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2A133D2327F0335D00658D09 /* Build configuration list for PBXProject "RollerCoaster" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2A133D3A27F0335E00658D09 /* Debug */,
+				2A133D3B27F0335E00658D09 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2A133D3C27F0335E00658D09 /* Build configuration list for PBXNativeTarget "RollerCoaster" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2A133D3D27F0335E00658D09 /* Debug */,
+				2A133D3E27F0335E00658D09 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2A133D2027F0335D00658D09 /* Project object */;
+}
