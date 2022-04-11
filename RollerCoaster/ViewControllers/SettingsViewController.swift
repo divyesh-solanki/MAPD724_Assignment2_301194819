@@ -21,8 +21,9 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
     @IBOutlet weak var tblView: UITableView!
     
     let SettingsList = [
-        SettingsSection(title: "Location", rows: [SettingsRow(title: "Show Current Location", theme: "")]),
-        SettingsSection(title: "Change Theme", rows: [SettingsRow(title: "Coming Soon", theme: "")])
+        SettingsSection(title: "Location", rows: [SettingsRow(title: "Show near by Casinos", theme: "")]),
+        SettingsSection(title: "Change Theme", rows: [SettingsRow(title: "Red", theme: "Red"), SettingsRow(title: "Blue", theme: "Blue")]),
+        SettingsSection(title: "About", rows: [SettingsRow(title: "US Gambling Laws", theme: "")]),
     ]
     
     override func viewDidLoad() {
@@ -35,12 +36,30 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
         tblView.backgroundColor = .clear
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        setThemeBasedUI()
+    }
+    
     private func showMap() {
         if let vc = self.storyboard?.instantiateViewController(withIdentifier: "kMapViewController") as? MapViewController {
             vc.modalTransitionStyle = .crossDissolve
             vc.modalPresentationStyle = .overFullScreen
             self.present(vc, animated: true, completion: nil)
         }
+    }
+    
+    private func showWebPage() {
+        if let vc = self.storyboard?.instantiateViewController(withIdentifier: "kWebPageViewController") as? WebPageViewController {
+            self.present(vc, animated: true, completion: nil)
+        }
+    }
+    
+    private func setThemeBasedUI() {
+        view.backgroundColor = Themes.init(rawValue: UserDefaultsManager.Theme)?.themeConfig().primaryColor
+        self.tabBarController?.tabBar.tintColor = Themes.init(rawValue: UserDefaultsManager.Theme)?.themeConfig().primaryColor
+        self.tabBarItem.selectedImage = UIImage(named: "control")?.withRenderingMode(.alwaysTemplate)
+        self.tabBarItem.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: (Themes.init(rawValue: UserDefaultsManager.Theme) ?? Themes.Red).themeConfig().primaryColor!], for: .selected)
     }
     
     /*
@@ -80,7 +99,8 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
         let cell = UITableViewCell(style: .value1, reuseIdentifier: "SettingsCell")
         cell.backgroundColor = .clear
         cell.textLabel?.textColor = .white
-        cell.accessoryType = (indexPath.section > 0 ? .none : .disclosureIndicator)
+        
+        cell.accessoryType = (indexPath.section == 1 ? (UserDefaultsManager.Theme == SettingsList[indexPath.section].rows[indexPath.row].title ? .checkmark : .none) : .disclosureIndicator)
         cell.textLabel?.text = SettingsList[indexPath.section].rows[indexPath.row].title
         cell.selectedBackgroundView = UIView()
         cell.selectedBackgroundView?.backgroundColor = .clear
@@ -91,6 +111,12 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
         tableView.deselectRow(at: indexPath, animated: true)
         if indexPath.section == 0 {
             showMap()
+        } else if indexPath.section == 2 {
+            showWebPage()
+        } else {
+            UserDefaultsManager.Theme = SettingsList[indexPath.section].rows[indexPath.row].title
+            tblView.reloadData()
+            setThemeBasedUI()
         }
     }
 

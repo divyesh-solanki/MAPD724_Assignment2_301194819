@@ -35,7 +35,21 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         navigationItem.largeTitleDisplayMode = .always
         navigationItem.title = "Home"
+        lblBalance.text = "\(balance) Coins"
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        setThemeBasedUI()
+    }
+    
+    private func setThemeBasedUI() {
+        view.backgroundColor = Themes.init(rawValue: UserDefaultsManager.Theme)?.themeConfig().primaryColor
+        self.tabBarController?.tabBar.tintColor = Themes.init(rawValue: UserDefaultsManager.Theme)?.themeConfig().primaryColor
+        self.tabBarItem.selectedImage = UIImage(named: "home")?.withRenderingMode(.alwaysTemplate)
+        self.tabBarItem.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: (Themes.init(rawValue: UserDefaultsManager.Theme) ?? Themes.Red).themeConfig().primaryColor!], for: .selected)
+    }
+    
     
     private func checkResult() {
         // var prev = 0
@@ -95,6 +109,7 @@ class ViewController: UIViewController {
         } completion: { _ in
             self.lblResult.text = nil
             self.lblResult.alpha = 1.0
+            self.btnStartSpin?.alpha = 1.0
             self.btnStartSpin?.isUserInteractionEnabled = true
         }
     }
@@ -107,9 +122,12 @@ class ViewController: UIViewController {
                 obj.element.startScroll()
             }
         })
-        btnStartSpin?.isHidden = true
-        btnStopSpin?.isHidden = false
+        
+        btnStartSpin?.alpha = 0.0
+        btnStartSpin?.isHidden = false
+        btnStopSpin?.isHidden = true
         btnStartSpin?.isUserInteractionEnabled = false
+        self.perform(#selector(stopSpin), with: nil, afterDelay: 3.0)
     }
     
     @IBAction private func stopSpin() {

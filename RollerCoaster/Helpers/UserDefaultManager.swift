@@ -7,15 +7,22 @@
 import Foundation
 
 struct UserDefaultsManager {
-    static let applicationDefaults = UserDefaults.standard
     static var Balance: Int {
         get {
-            let value = applicationDefaults.integer(forKey: UserDefaultsKey.Balance)
+            let value = Int(AppSettings.getSettings()?.balance ?? 0)
             return value == 0 ? 1000 : value
         }
         set {
-            applicationDefaults.setValue(newValue, forKey: UserDefaultsKey.Balance)
-            applicationDefaults.synchronize()
+            AppSettings.setSettings(balance: newValue)
+        }
+    }
+    static var Theme: String {
+        get {
+            let value = AppSettings.getSettings()?.theme
+            return value == nil ? "Red" : value!
+        }
+        set {
+            AppSettings.setSettings(theme: newValue)
         }
     }
 }

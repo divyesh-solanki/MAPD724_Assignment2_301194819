@@ -12,6 +12,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor: (Themes.init(rawValue: UserDefaultsManager.Theme) ?? Themes.Red).themeConfig().primaryColor!], for: .selected)
         return true
     }
 

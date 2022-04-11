@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pp4-um-K09">
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -121,6 +120,81 @@
             </objects>
             <point key="canvasLocation" x="679.71014492753625" y="-317.41071428571428"/>
         </scene>
+        <!--Web Page View Controller-->
+        <scene sceneID="LZT-Px-ycG">
+            <objects>
+                <viewController storyboardIdentifier="kWebPageViewController" id="Iof-iq-wRz" customClass="WebPageViewController" customModule="RollerCoaster" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="U4U-Xs-qOK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FFA-3V-4f8">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nOM-Ay-NWV">
+                                        <rect key="frame" x="8" y="8" width="28" height="28"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="nOM-Ay-NWV" secondAttribute="height" multiplier="1:1" id="HQY-Xb-gkH"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <inset key="titleEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="3"/>
+                                        <state key="normal" title="×"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="14"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="close:" destination="Iof-iq-wRz" eventType="touchUpInside" id="0YW-cB-lpv"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="US Gambling Laws" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6WR-UU-w0i">
+                                        <rect key="frame" x="131.33333333333331" y="11.666666666666664" width="151.33333333333331" height="21"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="6WR-UU-w0i" firstAttribute="centerY" secondItem="FFA-3V-4f8" secondAttribute="centerY" id="5Rx-ZP-MQp"/>
+                                    <constraint firstItem="nOM-Ay-NWV" firstAttribute="top" secondItem="FFA-3V-4f8" secondAttribute="top" constant="8" id="5hk-FH-lMM"/>
+                                    <constraint firstItem="6WR-UU-w0i" firstAttribute="centerX" secondItem="FFA-3V-4f8" secondAttribute="centerX" id="TrX-qi-DVx"/>
+                                    <constraint firstAttribute="bottom" secondItem="nOM-Ay-NWV" secondAttribute="bottom" constant="8" id="vpm-CD-Rh2"/>
+                                    <constraint firstItem="nOM-Ay-NWV" firstAttribute="leading" secondItem="FFA-3V-4f8" secondAttribute="leading" constant="8" id="w2s-3Z-qlw"/>
+                                    <constraint firstAttribute="height" constant="44" id="w3m-f6-Cp1"/>
+                                </constraints>
+                            </view>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oum-xr-sg2">
+                                <rect key="frame" x="0.0" y="44" width="414" height="692"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="HQO-cj-VwZ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="oum-xr-sg2" secondAttribute="bottom" id="9CY-Hx-Q6P"/>
+                            <constraint firstItem="oum-xr-sg2" firstAttribute="leading" secondItem="U4U-Xs-qOK" secondAttribute="leading" id="Wd4-Zm-YqB"/>
+                            <constraint firstItem="HQO-cj-VwZ" firstAttribute="trailing" secondItem="FFA-3V-4f8" secondAttribute="trailing" id="X6o-JP-fCL"/>
+                            <constraint firstAttribute="trailing" secondItem="oum-xr-sg2" secondAttribute="trailing" id="dAq-Hi-EwH"/>
+                            <constraint firstItem="oum-xr-sg2" firstAttribute="top" secondItem="FFA-3V-4f8" secondAttribute="bottom" id="jOq-Au-UWy"/>
+                            <constraint firstItem="FFA-3V-4f8" firstAttribute="leading" secondItem="HQO-cj-VwZ" secondAttribute="leading" id="mQL-Gk-5bH"/>
+                            <constraint firstItem="FFA-3V-4f8" firstAttribute="top" secondItem="HQO-cj-VwZ" secondAttribute="top" id="uJa-JO-32b"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webview" destination="oum-xr-sg2" id="z32-40-uNP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uOa-Ta-weU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1396" y="-318"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="To4-jQ-QRt">
             <objects>
@@ -226,7 +300,7 @@
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iXh-9d-DHp">
                                                 <rect key="frame" x="91" y="71.666666666666629" width="232" height="180"/>
-                                                <color key="backgroundColor" red="0.99906617399999997" green="0.0" blue="0.2313045859" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </view>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="TXx-7J-Ekb">
                                                 <rect key="frame" x="107" y="87.666666666666629" width="200" height="148"/>
